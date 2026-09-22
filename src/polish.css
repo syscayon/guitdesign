@@ -1,20 +1,19 @@
 /* Portfolio refinements: retain the approved composition, unify interaction. */
 html{scroll-padding-top:96px;scrollbar-gutter:stable}
 body{overflow-x:clip}
-::selection{background:#ff329648;color:#fff}
+::selection{background:#0125ff48;color:#fff}
 .header-slot{height:96px;position:relative;display:flow-root;z-index:80}
 .home-opening>.header-slot{position:absolute;inset:0 0 auto}
 .home-opening .header-slot .topbar:not(.is-scrolled){position:relative;inset:auto}
 .topbar.is-scrolled{box-shadow:none}
 .topbar,.home-opening .topbar,.fivem-opening .topbar{z-index:1000}
 .topbar.is-scrolled,.home-opening .topbar.is-scrolled,.fivem-opening .topbar.is-scrolled{z-index:1100}
-.brand-wordmark{width:56px;height:30px;object-fit:contain;object-position:center;mix-blend-mode:screen}
 .hero-slide{position:absolute;inset:0}
 .hero-caption{z-index:1}
 .hero-caption>div:first-child{max-width:65%}
 .hero-caption h2{text-shadow:0 2px 14px #0008}
 .hero-slide::after{content:'';position:absolute;inset:50% 0 0;pointer-events:none;background:linear-gradient(transparent,#0007)}
-.intro{background:radial-gradient(ellipse at 10% 80%,#ff329605,transparent 75%)}
+.intro{background:radial-gradient(ellipse at 10% 80%,#0125ff05,transparent 75%)}
 .section-heading{position:relative;gap:20px}
 .section-heading h2{font-size:clamp(32px,3.6vw,58px)}
 .section-heading .text-link{min-height:44px}
@@ -30,7 +29,7 @@ body{overflow-x:clip}
 .cta,.addon-action,.nav-contact{transition:background .2s,border-color .2s,transform .25s}
 .filter-tabs{gap:6px;padding:5px;border:1px solid #ffffff17;background:#111216;border-radius:14px;width:fit-content}
 .filter-tabs button{border:0;border-radius:9px;min-height:44px;padding:10px 18px;color:#aaa8b3;transition:background .22s,color .22s,box-shadow .22s}
-.filter-tabs button[aria-pressed=true]{background:#29202b;color:#ffb0d3;box-shadow:inset 0 0 0 1px #ff70b632}
+.filter-tabs button[aria-pressed=true]{background:#29202b;color:#a4b2ff;box-shadow:inset 0 0 0 1px #6d81ff32}
 .plan ul{border-top:1px solid #ffffff12;padding-top:24px}
 .plan{transition:border-color .25s,box-shadow .25s}
 .plan-notes{color:#b7b0bf}
@@ -53,13 +52,13 @@ footer small{color:#b0b0b7}
 @media(hover:hover) and (prefers-reduced-motion:no-preference){
  .piece:hover{border-color:#ffffff30}
  .piece:hover .picture>img{filter:brightness(1.035)}
- .piece:hover .piece-caption .circle{transform:rotate(8deg);color:#ff90c3;border-color:#ff90c3}
+ .piece:hover .piece-caption .circle{transform:rotate(8deg);color:#7b8cff;border-color:#7b8cff}
  .text-link:hover .arrow-right{transform:translateX(3px)}
  .text-link:hover .arrow-left{transform:translateX(-3px)}
  .text-link:hover .arrow-up-right,.cta:hover .arrow-up-right,.nav-contact:hover .arrow-up-right,footer a:hover .arrow-up-right{transform:translate(2px,-2px)}
- .project-meta a:hover .circle,.project-link:hover .circle{transform:translateX(3px);border-color:#ff90c3;color:#ff90c3}
+ .project-meta a:hover .circle,.project-link:hover .circle{transform:translateX(3px);border-color:#7b8cff;color:#7b8cff}
  .plan:hover{border-color:var(--tier);box-shadow:0 12px 30px #0003}
- .filter-tabs button:hover{color:#f8d7e8;background-color:#ffffff07}
+ .filter-tabs button:hover{color:#dce3ff;background-color:#ffffff07}
 }
 @media(max-width:700px){
  .header-slot,.home-opening>.header-slot{position:relative;inset:auto;height:144px;flex-shrink:0}
@@ -67,7 +66,6 @@ footer small{color:#b0b0b7}
  .topbar.is-scrolled .nav-contact{width:40px;height:40px;flex-basis:40px}
  .topbar.is-scrolled .logo-window{width:28px;height:28px}
  .topbar.is-scrolled .brand>span:last-child{display:block}
- .topbar.is-scrolled .brand-wordmark{display:none}
  .hero-project{height:360px}
  .hero-caption{gap:12px;left:18px;right:18px}
  .hero-caption>div:first-child{max-width:57%;padding:10px;background:#06110bb8;border-radius:5px}
@@ -123,3 +121,7 @@ footer small{color:#b0b0b7}
  .home-opening .hero-caption h2{font-size:20px}
  .home-opening .slide-tabs{gap:6px}
 }
+
+/* Blue primary accent: preserve the original colors in portfolio artwork. */
+.cta{color:#f7f9ff}.topbar:not(.topbar-fivem) .nav-contact:hover{color:#f7f9ff}.filter-tabs button[aria-pressed=true]{background:#101d5a;color:#c4ceff;box-shadow:inset 0 0 0 1px #6d81ff55}
+
