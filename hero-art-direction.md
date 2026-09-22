@@ -1,0 +1,7 @@
+# FiveM hero — 2026-09-18
+
+Created with the built-in image generation tool. Asset: `public/assets/fivem-car-hero.png`. User references: illustrated helicopter, purple sports car, and GTA-inspired object illustration collection. The existing sunset asset is retained as a previous version.
+
+## Generation prompt
+
+Create a wide 16:9 website hero background illustration (1920x1080 desired). Style reference: the user's attached GTA VI-like artwork of a purple sports car rear, helicopter and lifestyle objects: crisp hand-painted cel shaded shapes, angular highlights, fine dark outlines, polished editorial video game loading screen illustration. Single subject: close low rear three-quarter view of an original magenta-purple sports car, occupying the RIGHT 45% and lower-right corner, cropped boldly at the right edge. No logos or readable lettering or UI. Extremely simple backdrop: open violet dusk sky with subtle lavender light on the right and deep muted indigo on the LEFT 55%, no city, no buildings, no palms, no other vehicles, no people. Left half must remain spacious, dark and visually quiet for white website heading and button overlay. Glossy geometric car panels, subtle star glints, no busy ground. Sophisticated simple composition, not photorealistic. The user wants less scenery and fewer distracting elements than the existing sunset city hero. Generate background art only, no website text or frame.

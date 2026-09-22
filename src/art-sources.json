@@ -1,0 +1,38 @@
+{
+  "lrz": [
+    "/assets/lrz-0.webp",
+    "/assets/lrz-1.webp",
+    "/assets/lrz-2.webp",
+    "/assets/lrz-3.webp",
+    "/assets/lrz-4.webp"
+  ],
+  "umidifica": [
+    "/assets/umidifica-0.webp",
+    "/assets/umidifica-1.webp",
+    "/assets/umidifica-2.webp",
+    "/assets/umidifica-3.webp"
+  ],
+  "codders": [
+    "/assets/codders-0.webp"
+  ],
+  "distric99": [
+    "/assets/distric99-0.webp",
+    "/assets/distric99-1.webp",
+    "/assets/distric99-2.webp",
+    "/assets/distric99-3.webp",
+    "/assets/distric99-4.webp",
+    "/assets/distric99-5.webp"
+  ],
+  "social2024": [
+    "/assets/social2024-0.webp",
+    "/assets/social2024-1.webp",
+    "/assets/social2024-2.webp",
+    "/assets/social2024-3.webp"
+  ],
+  "social": [
+    "/assets/social-0.webp"
+  ],
+  "logos": [
+    "/assets/logos-0.webp"
+  ]
+}
