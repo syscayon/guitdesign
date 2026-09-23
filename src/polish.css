@@ -301,4 +301,94 @@ footer small{color:#b0b0b7}
 /* V10 mark is already white and has its transparent padding removed. */
 .logo-window img{width:100%!important;height:100%!important;max-width:100%!important;object-fit:contain;filter:none!important;mix-blend-mode:normal!important;transform:none!important}
 
+/* Pure-black canvas and scroll-reactive Guit star accents. */
+:root,body,#root,.fivem-page{background:#000}
+.home-opening{isolation:auto!important}
+#conteudo{position:relative}
+.parallax-stars{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:3}
+.parallax-star{position:absolute;width:clamp(143px,15.4vw,253px);height:auto;filter:drop-shadow(0 16px 42px #000a);will-change:transform}
+.parallax-star-a{top:29%;left:clamp(-76px,-4vw,-42px)}
+.parallax-star-b{top:63%;right:clamp(-82px,-4.2vw,-46px);width:clamp(127px,13.2vw,220px)}
+@media(max-width:700px){
+ .parallax-star{width:130px;opacity:.9}
+ .parallax-star-a{top:33%;left:-48px}
+ .parallax-star-b{top:68%;right:-46px;width:114px}
+}
+
+/* Darker, more neutral secondary surfaces. */
+.topbar,.home-opening .topbar,.fivem-opening .topbar{background:rgba(8,10,14,.94)}
+.fivem-opening .topbar-fivem{background:rgba(9,11,15,.92)}
+.topbar.is-scrolled,.home-opening .topbar.is-scrolled,.fivem-opening .topbar.is-scrolled{background:rgba(7,9,12,.96)}
+.picture,.piece,.piece .piece-caption,.general-logos .piece-caption{background:rgb(11,13,17)}
+.plan{background:rgb(12,14,18)}
+.general-logos .piece{border-color:#ffffff0c}
+
+/* Brand-first opening: navigation, Guit signature, then the project carousel. */
+.home-masthead{position:relative;padding-bottom:clamp(22px,3vw,44px);background:#000}
+.home-masthead .header-slot{position:relative;z-index:2147483646}
+.brand-banner{height:clamp(118px,12.8vw,196px);margin:10px var(--gutter) 0;overflow:hidden;border:1px solid #ffffff0c;border-radius:7px;background:#050505}
+.brand-banner img{width:100%;height:100%;object-fit:cover;object-position:center}
+.home-showcase .intro{padding-top:62px}
+@media(max-width:700px){
+ .home-masthead{padding-bottom:24px}
+ .brand-banner{height:126px;margin:10px 16px 0;border-radius:6px}
+ .brand-banner img{max-width:none;width:148%;margin-left:-24%;object-position:center}
+ .home-showcase .intro{padding-top:35px}
+}
+
+/* Blue Guit identity artwork for the closing contact banner. */
+.contact{isolation:isolate}
+.contact-visual{position:absolute;inset:0;z-index:0;background:url('/assets/guit-contact-blue-v2.png') center/cover no-repeat;overflow:hidden}
+.contact-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,#000e 31%,#0007 53%,transparent 78%)}
+@media(max-width:700px){
+ .contact{min-height:390px}
+ .contact-visual::after{background:linear-gradient(180deg,#000e 0%,#000a 58%,#0004 100%)}
+}
+
+/* The navigation CTA stays active; hover adds only a restrained blue projection. */
+:root{--page-gutter:clamp(24px,4.3vw,76px);--gutter:max(var(--page-gutter),calc((100vw - 1648px)/2))}
+.section{max-width:none;margin-inline:0}
+.topbar:not(.is-scrolled),.home-opening .topbar:not(.is-scrolled),.fivem-opening .topbar:not(.is-scrolled){margin-left:var(--gutter);margin-right:var(--gutter)}
+.home-opening .intro{padding-left:var(--gutter);padding-right:24px;width:calc(var(--gutter) + 620px);max-width:100%}
+.contact{grid-template-columns:minmax(0,1fr)}
+.contact-copy{padding-left:var(--gutter);padding-right:var(--gutter)}
+.studio-social-gallery .gallery{align-items:start}
+.studio-social-gallery .piece{width:100%;min-width:0}
+.studio-social-gallery .piece .picture.studio-social{aspect-ratio:4/5;height:auto;width:100%;position:relative;background:#0b0d11}
+.studio-social-gallery .piece .picture.studio-social>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.studio-social-gallery .piece .piece-caption{height:64px;min-height:64px;box-sizing:border-box;align-items:center}
+.studio-hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:28px;pointer-events:auto}
+.cta-instagram{background:transparent;border:1px solid #ffffff80;color:#fff}
+.cta-instagram:hover{background:#ffffff0d;border-color:#fff}
+@media(max-width:700px){
+ .studio-social-gallery .gallery.three{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-opening .intro{width:100%;padding-right:var(--gutter)}
+ .studio-hero-actions{gap:10px}
+ .studio-hero-actions .cta{font-size:11px;padding:12px 15px;min-height:46px}
+}
+.brand-stars{display:flex;gap:5px;color:#0125ff;line-height:1;flex-shrink:0}
+.brand-stars svg{width:13px;height:13px}
+.branded-heading{display:flex;flex-direction:column;gap:12px}
+.section-heading h2{font-weight:850;letter-spacing:-.055em}
+.brand-emphasis{position:relative;display:inline-block;color:#fff;text-shadow:none;isolation:isolate}
+.brand-emphasis::before{content:'';position:absolute;left:-.025em;right:.13em;bottom:.045em;height:.22em;background:#0125ff;z-index:-1;transform-origin:left center;animation:presence-marker .75s .15s ease-in-out both}
+@keyframes presence-marker{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.topbar .logo-window,.topbar nav a,.topbar .nav-contact{transition:padding .2s ease-in-out,width .2s ease-in-out,height .2s ease-in-out,font-size .2s ease-in-out,gap .2s ease-in-out,box-shadow .2s ease-in-out}
+.intro h1{font-weight:850}
+.intro .eyebrow{color:#d5dcff;letter-spacing:.19em}
+.contact-copy>.brand-stars{margin-bottom:18px;color:#8091ff}
+.contact h2{font-weight:850;text-shadow:0 0 28px #0125ff50}
+.contact-visual::after{background:linear-gradient(90deg,#000e 0%,#000a 31%,#0003 58%,transparent 80%)}
+.slide-tabs button[aria-pressed=true]{border-color:#4962ff;text-shadow:0 0 12px #0125ff}
+.filter-tabs button[aria-pressed=true]{background:#0125ff;color:#fff;box-shadow:none}
+.plan-signature{background:radial-gradient(ellipse at 100% 0%,#0125ff38,transparent 65%),#0c0e12}
+.plan-elite{background:radial-gradient(ellipse at 100% 0%,#0125ff55,transparent 70%),#0c0e12}
+@media(max-width:700px){
+ .contact-visual::after{background:linear-gradient(90deg,#000d,#0006 65%,#0002)}
+ .branded-heading{gap:9px}
+ .brand-stars svg{width:11px;height:11px}
+}
+.topbar .nav-contact,.topbar:not(.topbar-fivem) .nav-contact{background:#0125ff;border-color:#0125ff;color:#fff;transition:box-shadow .22s ease,transform .22s ease,background .22s ease}
+.topbar .nav-contact:hover,.topbar:not(.topbar-fivem) .nav-contact:hover{background:#0125ff;border-color:#0125ff;color:#fff;box-shadow:0 7px 18px #0125ff66;transform:translateY(-1px)}
+
 
