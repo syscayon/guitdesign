@@ -55,3 +55,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Align full navigation, hero copy, section grids, contact copy and footer to one shared responsive content gutter (1648px maximum inner width). Home Social Media uses three columns desktop and two mobile, like the logo gallery, with full artwork visible. Hero includes an outlined Instagram CTA to https://www.instagram.com/oguitdesign/ beside Discord.
 
 - Home Social Media frames have a fixed 4:5 aspect ratio and equal 64px caption rows. Center full images with contain, using dark graphite for any empty space; intrinsic image dimensions must not change frame height.
+
+- Contact banner uses supplied contact-guit-final.png. Replace Mais+Code with TROLL.AI. Three red parallax stars appear on home and FiveM, including one near Projects toward the right-center. Studio hero rotates presence, authority, creativity, impact and personality in Portuguese every 4 seconds with staggered upward letters and a word-width blue marker. FiveM slogan: Sua cidade. Uma marca inesquecível. Social thumbnails fill their frames with cover; lightbox preserves originals.
+
+- All red stars move upward as scrolling progresses. The Projects star crosses the banner's upper area, offset toward the right but pulled inward from the page edge, sitting high enough to avoid important text and artwork subjects. Project spelling and canonical route are District99 and /projetos/district99; preserve compatibility with the old route.

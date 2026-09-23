@@ -338,7 +338,7 @@ footer small{color:#b0b0b7}
 
 /* Blue Guit identity artwork for the closing contact banner. */
 .contact{isolation:isolate}
-.contact-visual{position:absolute;inset:0;z-index:0;background:url('/assets/guit-contact-blue-v2.png') center/cover no-repeat;overflow:hidden}
+.contact-visual{position:absolute;inset:0;z-index:0;background:url('/assets/contact-guit-final.png') center/cover no-repeat;overflow:hidden}
 .contact-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,#000e 31%,#0007 53%,transparent 78%)}
 @media(max-width:700px){
  .contact{min-height:390px}
@@ -371,6 +371,13 @@ footer small{color:#b0b0b7}
 .branded-heading{display:flex;flex-direction:column;gap:12px}
 .section-heading h2{font-weight:850;letter-spacing:-.055em}
 .brand-emphasis{position:relative;display:inline-block;color:#fff;text-shadow:none;isolation:isolate}
+.rotating-word{display:inline-block;vertical-align:bottom;white-space:nowrap;line-height:1.2;max-width:100%}
+.roulette-word{overflow:hidden;vertical-align:bottom;line-height:1.2;padding-right:.09em;margin-right:-.09em}
+.roulette-letter{display:inline-block}
+.roulette-word::before{right:.09em;bottom:.12em}
+.home-opening .intro h1{font-size:clamp(36px,4.4vw,70px)}
+.parallax-star-c{top:0;right:18%;left:auto;width:clamp(95px,10vw,180px)}
+@media(max-width:700px){.home-opening .intro h1{font-size:clamp(30px,7vw,49px)}.parallax-star-c{top:0;right:14%;left:auto;width:90px}.fivem-intro h1{font-size:clamp(32px,7.8vw,49px)}}
 .brand-emphasis::before{content:'';position:absolute;left:-.025em;right:.13em;bottom:.045em;height:.22em;background:#0125ff;z-index:-1;transform-origin:left center;animation:presence-marker .75s .15s ease-in-out both}
 @keyframes presence-marker{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .topbar .logo-window,.topbar nav a,.topbar .nav-contact{transition:padding .2s ease-in-out,width .2s ease-in-out,height .2s ease-in-out,font-size .2s ease-in-out,gap .2s ease-in-out,box-shadow .2s ease-in-out}
