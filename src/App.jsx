@@ -32,7 +32,7 @@ const vipIcons=[
  {src:'/assets/vip-reset-aparencia.png',name:'Exodus · Reset appearance'},
  {src:'/assets/vip-extra-char-slot.png',name:'Exodus · Extra character slot'}
 ];
-function Logo(){return <a href='/' className='brand' aria-label='Guit Design — início'><span className='logo-window'><img src='/assets/guit-logo-v8-cropped.png' alt=''/></span></a>}
+function Logo(){return <a href='/' className='brand' aria-label='Guit Design — início'><span className='logo-window'><img src='/assets/guit-logo-v10-cropped.png' alt=''/></span></a>}
 function CTA({children='Conversar no Discord'}){return <a className='cta' href={discord} target='_blank' rel='noreferrer'><DiscordLogo weight='fill' size={23}/><span>{children}</span><ArrowUpRight className="arrow-up-right" size={19}/></a>}
 function Picture({src,alt,crop='',eager=false}){return <div className={`picture ${crop}`}><img src={src} alt={alt} loading={eager?'eager':'lazy'} decoding='async'/></div>}
 function Header({fivem=false}){
