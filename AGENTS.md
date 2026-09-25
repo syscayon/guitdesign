@@ -61,3 +61,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - All red stars move upward as scrolling progresses. The Projects star crosses the banner's upper area, offset toward the right but pulled inward from the page edge, sitting high enough to avoid important text and artwork subjects. Project spelling and canonical route are District99 and /projetos/district99; preserve compatibility with the old route.
 
 - Exclude the Mateus Rodri promotional portrait (“Mais de 10 MM$ gerados”) from the District99 project gallery.
+
+- The top navigation includes a compact cascading language selector. Portuguese is the default, with complete Spanish and English interface translations across the studio, FiveM and project pages; persist the visitor's selection locally.
