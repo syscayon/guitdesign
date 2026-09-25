@@ -63,3 +63,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Exclude the Mateus Rodri promotional portrait (“Mais de 10 MM$ gerados”) from the District99 project gallery.
 
 - The top navigation includes a compact cascading language selector. Portuguese is the default, with complete Spanish and English interface translations across the studio, FiveM and project pages; persist the visitor's selection locally.
+
+- FiveM plan prices use an accessible mouse/touch scratch-card interaction that reveals a localized Discord invitation. The top plan is named Elysium in every language and uses a blue-to-violet CTA gradient.
+
+- FiveM has no displayed prices, including the optional add-on. Silver noisy scratch-off coatings reveal only the localized Discord invitation. Use the generated tilted silver coin as a repeating gesture hint, stopping on interaction and respecting reduced motion. Elysium CTA uses a light-lilac to #a998ff gradient with dark readable text.
+- All site hover effects ease in and out over 0.2 seconds. Preserve the navigation layout compaction at 0.2 seconds and respect reduced motion. Gradient hover effects should interpolate smoothly rather than swap background images abruptly.
+
+- Scratch-card reveal text is 'Preço no Discord' (PT), 'Precio en Discord' (ES), and 'Price on Discord' (EN) across all plans.

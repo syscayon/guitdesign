@@ -147,18 +147,24 @@ footer .logo-window img{
 /* Increasing visual intensity across plan tiers. */
 .plan{position:relative;overflow:hidden;border-radius:12px;--tier:#b5b6c4;border-top:2px solid var(--tier)}
 .plan-signature{--tier:#4c63ff;border-color:#2a45ff55;border-top-color:var(--tier);background:radial-gradient(ellipse at 100% 0%,#0125ff18,transparent 65%),#151a25}
-.plan-elite{--tier:#ffd49b;border-color:#ffcd9566;border-top-color:var(--tier);background:radial-gradient(ellipse at 100% 0%,#ffd29a24,transparent 55%),linear-gradient(145deg,#1b2335,#141923);box-shadow:0 10px 36px #3456ff10}
+.plan-elysium{--tier:#a998ff;border-color:#765cff66;border-top-color:var(--tier);background:radial-gradient(ellipse at 100% 0%,#753cff2e,transparent 58%),linear-gradient(145deg,#17152a,#0c0e12);box-shadow:0 10px 36px #522eff20}
 .plan-level{display:flex;align-items:flex-end;gap:5px;height:24px;margin-bottom:22px}
 .plan-level span{width:22px;height:8px;border-radius:2px;background:#ffffff12}
 .plan-level span:nth-child(2){height:15px}.plan-level span:nth-child(3){height:22px}
 .plan-level .lit{background:var(--tier)}
-.plan-elite .plan-level .lit{box-shadow:0 0 12px #ffc58b30}
-.plan-signature h3,.plan-elite h3{color:var(--tier)}
+.plan-elysium .plan-level .lit{box-shadow:0 0 14px #8f72ff66}
+.plan-signature h3,.plan-elysium h3{color:var(--tier)}
 .plan li svg{color:var(--tier)}
 .plan-essentials .cta{background:#202735;color:#f5f3f7;border:1px solid #ffffff25}
 .plan-essentials .cta:hover{background:#343f51}
-.plan-elite .cta{background:linear-gradient(110deg,#4160ff,#ffda9e);color:#141c30}
-.plan-elite .cta:hover{background:linear-gradient(110deg,#7890ff,#ffe8bd)}
+.plan-elysium .cta{background:linear-gradient(110deg,#ded5ff 0%,#a998ff 100%);color:#241b44}
+.plan-elysium .cta:hover{background:linear-gradient(110deg,#e9e2ff 0%,#b5a6ff 100%);box-shadow:0 8px 24px #a998ff33}
+.scratch-price{position:relative;height:92px;margin:24px 0;border:1px solid #ffffff14;border-radius:8px;overflow:hidden;background:#090c12;isolation:isolate}
+.scratch-result{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:9px;color:#fff;font-size:14px;font-weight:700;background:radial-gradient(circle at 50% 120%,#0125ff55,transparent 62%),#090c12;transition:background .2s}
+.scratch-result:hover{background:radial-gradient(circle at 50% 120%,#694cff88,transparent 68%),#0b0e17}
+.scratch-price canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;transition:opacity .35s ease}
+.scratch-price.is-revealed canvas{opacity:0;pointer-events:none}
+.scratch-price canvas:focus-visible{outline:2px solid #8091ff;outline-offset:-4px}
 .plan-addon{display:flex;align-items:center;gap:24px;margin-top:26px;padding:24px 28px;border:1px solid #ffffff20;border-radius:12px;background:#131722}
 .addon-art{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;width:78px;height:42px;flex-shrink:0}
 .addon-art span{height:42px;border:1px solid #7b8cff85;border-radius:2px;background:linear-gradient(180deg,#2748ff,#0125ff55)}
@@ -389,7 +395,7 @@ footer small{color:#b0b0b7}
 .slide-tabs button[aria-pressed=true]{border-color:#4962ff;text-shadow:0 0 12px #0125ff}
 .filter-tabs button[aria-pressed=true]{background:#0125ff;color:#fff;box-shadow:none}
 .plan-signature{background:radial-gradient(ellipse at 100% 0%,#0125ff38,transparent 65%),#0c0e12}
-.plan-elite{background:radial-gradient(ellipse at 100% 0%,#0125ff55,transparent 70%),#0c0e12}
+.plan-elysium{background:radial-gradient(ellipse at 100% 0%,#7548ff55,transparent 70%),#0c0e12}
 @media(max-width:700px){
  .contact-visual::after{background:linear-gradient(90deg,#000d,#0006 65%,#0002)}
  .branded-heading{gap:9px}
@@ -417,3 +423,17 @@ footer small{color:#b0b0b7}
 }
 
 
+.scratch-coin{position:absolute;z-index:2;width:52px;height:52px;object-fit:contain;left:calc(50% - 26px);top:18px;pointer-events:none;opacity:0;filter:drop-shadow(2px 4px 3px #0005)}
+.scratch-coin.is-visible{animation:scratch-gesture 7s ease-in-out infinite}
+@keyframes scratch-gesture{0%,12%{opacity:0;transform:translate(48px,-8px) rotate(-12deg)}18%{opacity:1;transform:translate(38px,0) rotate(-12deg)}27%{opacity:1;transform:translate(-40px,9px) rotate(8deg)}36%{opacity:1;transform:translate(32px,17px) rotate(-12deg)}45%{opacity:1;transform:translate(-32px,24px) rotate(8deg)}53%,100%{opacity:0;transform:translate(-40px,8px) rotate(8deg)}}
+@media(prefers-reduced-motion:reduce){.scratch-coin{display:none}}
+
+/* Shared hover timing, on entry and exit; layout compaction keeps its 0.2s timing. */
+@media(prefers-reduced-motion:no-preference){
+ a,button,summary,.plan,.circle,.picture>img,a svg,button svg,summary svg{
+  transition:color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out,box-shadow .2s ease-in-out,filter .2s ease-in-out,opacity .2s ease-in-out,transform .2s ease-in-out,padding .2s ease-in-out,width .2s ease-in-out,height .2s ease-in-out,font-size .2s ease-in-out,gap .2s ease-in-out!important;
+ }
+}
+/* Gradients cannot interpolate as background images; brighten the existing artwork smoothly. */
+.plan-elysium .cta:hover{background:linear-gradient(110deg,#ded5ff 0%,#a998ff 100%);filter:brightness(1.06)}
+.scratch-result:hover{background:radial-gradient(circle at 50% 120%,#0125ff55,transparent 62%),#090c12;filter:brightness(1.2)}

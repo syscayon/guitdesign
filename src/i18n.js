@@ -1,5 +1,6 @@
 export const translations = {
   pt: {
+    enterDiscord: 'Preço no Discord', scratchHint: 'Raspe para revelar',
     localeName: 'Português', language: 'Idioma', navLabel: 'Navegação principal', studio: 'Estúdio', projects: 'Projetos', plans: 'Planos', talk: 'Vamos conversar', talkDiscord: 'Conversar no Discord', talkInstagram: 'Conversar no Instagram',
     homeEyebrow: 'ESTÚDIO DE DESIGN GRÁFICO', designWith: 'Design com', words: ['presença','autoridade','criatividade','impacto','personalidade'], viewProject: 'Ver projeto', featuredProjects: 'Projetos em destaque', show: 'Mostrar', allProjects: 'Ver todos', fewerProjects: 'Ver menos', logos: 'Logotipos.', socialMedia: 'Social Media.', visualIdentity: 'Identidade visual', completeIdentity: 'Identidade visual completa',
     contactHome: ['Vamos criar','algo seu?'], contactFiveM: ['Sua cidade.','Sua identidade.'], discoverStudio: 'Conheça o estúdio', designForFiveM: 'Design para FiveM', contactVisual: 'Composição visual azul da Guit Design',
@@ -17,6 +18,7 @@ export const translations = {
     }
   },
   es: {
+    enterDiscord: 'Precio en Discord', scratchHint: 'Raspa para revelar',
     localeName: 'Español', language: 'Idioma', navLabel: 'Navegación principal', studio: 'Estudio', projects: 'Proyectos', plans: 'Planes', talk: 'Hablemos', talkDiscord: 'Hablar por Discord', talkInstagram: 'Hablar por Instagram',
     homeEyebrow: 'ESTUDIO DE DISEÑO GRÁFICO', designWith: 'Diseño con', words: ['presencia','autoridad','creatividad','impacto','personalidad'], viewProject: 'Ver proyecto', featuredProjects: 'Proyectos destacados', show: 'Mostrar', allProjects: 'Ver todos', fewerProjects: 'Ver menos', logos: 'Logotipos.', socialMedia: 'Redes Sociales.', visualIdentity: 'Identidad visual', completeIdentity: 'Identidad visual completa',
     contactHome: ['Creemos','algo tuyo'], contactFiveM: ['Tu ciudad.','Tu identidad.'], discoverStudio: 'Conoce el estudio', designForFiveM: 'Diseño para FiveM', contactVisual: 'Composición visual azul de Guit Design',
@@ -34,6 +36,7 @@ export const translations = {
     }
   },
   en: {
+    enterDiscord: 'Price on Discord', scratchHint: 'Scratch to reveal',
     localeName: 'English', language: 'Language', navLabel: 'Main navigation', studio: 'Studio', projects: 'Projects', plans: 'Plans', talk: "Let's talk", talkDiscord: 'Talk on Discord', talkInstagram: 'Talk on Instagram',
     homeEyebrow: 'GRAPHIC DESIGN STUDIO', designWith: 'Design with', words: ['presence','authority','creativity','impact','personality'], viewProject: 'View project', featuredProjects: 'Featured projects', show: 'Show', allProjects: 'View all', fewerProjects: 'View less', logos: 'Logos.', socialMedia: 'Social Media.', visualIdentity: 'Visual identity', completeIdentity: 'Complete visual identity',
     contactHome: ["Let's create",'something yours'], contactFiveM: ['Your city.','Your identity.'], discoverStudio: 'Discover the studio', designForFiveM: 'Design for FiveM', contactVisual: 'Blue Guit Design visual composition',
