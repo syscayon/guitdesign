@@ -1,4 +1,1 @@
-node_modules/
-dist/
-*.log
-site-deploy.tar.gz
+_*.html

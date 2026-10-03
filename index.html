@@ -1,15 +1,208 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Guit Design: identidade visual, logotipos e design gráfico. Conheça nossos projetos e os pacotes de design para FiveM." />
-    <meta name="theme-color" content="#0b0c0d" />
-    <link rel="icon" type="image/png" href="/assets/guit-logo-v10-cropped.png" />
-    <title>Guit Design — Design com presença</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guit Design — Design gráfico</title>
+<meta name="description" content="Guit Design: estúdio de design gráfico de Guilherme Travaglini. Identidade visual, branding e social media.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="assets/guit-logo-v10-cropped.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#trabalhos">Pular para os trabalhos</a>
+
+<!-- Abertura: cortina azul com a estrela -->
+<div class="curtain" aria-hidden="true">
+  <svg class="star curtain-star" viewBox="0 0 100 100"><use href="#star"/></svg>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 100 100"><polygon points="44.9,1.3 53.4,35.4 71.2,16.1 62.3,41.4 97.0,40.0 64.8,52.3 87.2,71.5 59.2,61.8 63.0,95.2 47.9,64.9 29.3,83.1 38.3,59.4 4.0,66.8 35.0,49.0 13.8,30.8 41.6,37.6" fill="currentColor"/></symbol>
+</svg>
+
+<div class="light" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span>Ver case</span></div>
+
+<header class="topbar">
+  <a href="/" class="brand" aria-label="Guit Design, início"><img src="assets/guit-logo-v10-cropped.png" alt=""><span>Guit Design</span></a>
+  <nav aria-label="Principal" id="nav-principal">
+    <a href="#trabalhos">Trabalhos</a>
+    <a href="#social">Social media</a>
+    <a href="#sobre">Sobre</a>
+    <a href="/fivem" class="nav-fivem"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="44.9,1.3 53.4,35.4 71.2,16.1 62.3,41.4 97.0,40.0 64.8,52.3 87.2,71.5 59.2,61.8 63.0,95.2 47.9,64.9 29.3,83.1 38.3,59.4 4.0,66.8 35.0,49.0 13.8,30.8 41.6,37.6" fill="currentColor"/></svg>FiveM</a>
+  </nav>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="nav-principal">Menu</button>
+  <a class="btn btn-blue btn-sm magnetic" href="https://discord.gg/pM6tQah" target="_blank" rel="noreferrer">Conversar</a>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <h1 id="hero-title" class="poster">
+      <span class="sr-only">Guit Design</span>
+      <span class="poster-line" aria-hidden="true" data-split>GUIT</span>
+      <span class="poster-line poster-line--2" aria-hidden="true" data-split>DESIGN</span>
+  <svg class="star hero-star" viewBox="0 0 100 100" aria-hidden="true"><use href="#star"/></svg>
+    </h1>
+
+    <div class="hero-side">
+      <p class="hero-lede rise" style="--d:1">Design com <span class="word-swap" aria-live="off"><span>presença</span></span>.</p>
+      <p class="hero-copy rise" style="--d:2">Estúdio de design gráfico de Guilherme Travaglini. Identidades visuais, branding e social media para marcas que querem ser lembradas.</p>
+      <div class="hero-actions rise" style="--d:3">
+        <a class="btn btn-blue magnetic" href="https://discord.gg/pM6tQah" target="_blank" rel="noreferrer">Conversar no Discord</a>
+        <a class="btn btn-ghost magnetic" href="https://www.instagram.com/oguitdesign/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </div>
+
+    <a class="hero-scroll rise" style="--d:4" href="#trabalhos"><span class="hero-scroll-bar" aria-hidden="true"></span>Ver trabalhos</a>
+  </section>
+
+  <!-- TRABALHOS -->
+  <section class="works" id="trabalhos" aria-labelledby="works-title">
+    <div class="section-head">
+      <h2 id="works-title" class="display reveal-type" data-split>Trabalhos</h2>
+      <p class="section-note reveal">Quatro identidades, cada uma com sua própria voz. Clique para abrir o case.</p>
+    </div>
+
+    <div class="works-grid">
+      <article class="work work--lrz" data-project="lrz">
+        <button class="work-media" aria-label="Abrir case LRZ Bikeshop"><img src="assets/lrz-0.webp" alt="Identidade visual LRZ Bikeshop" loading="lazy"><span class="work-sheen"></span></button>
+        <div class="work-meta"><h3 class="work-title" data-roll>LRZ Bikeshop</h3><p>Identidade visual</p></div>
+      </article>
+      <article class="work work--umi" data-project="umidifica">
+        <button class="work-media" aria-label="Abrir case Umidifica"><img src="assets/umidifica-0.webp" alt="Identidade visual Umidifica" loading="lazy"><span class="work-sheen"></span></button>
+        <div class="work-meta"><h3 class="work-title" data-roll>Umidifica</h3><p>Identidade visual</p></div>
+      </article>
+      <article class="work work--d99" data-project="district99">
+        <button class="work-media" aria-label="Abrir case District99"><img src="assets/district99-0.webp" alt="Identidade visual District99" loading="lazy"><span class="work-sheen"></span></button>
+        <div class="work-meta"><h3 class="work-title" data-roll>District99</h3><p>Identidade visual para GTA RP</p></div>
+      </article>
+      <article class="work work--codders" data-project="codders">
+        <button class="work-media" aria-label="Abrir case Codders"><img src="assets/codders-0.webp" alt="Identidade visual Codders" loading="lazy"><span class="work-sheen"></span></button>
+        <div class="work-meta"><h3 class="work-title" data-roll>Codders</h3><p>Identidade visual</p></div>
+      </article>
+      <aside class="works-aside reveal">
+        <svg class="star works-star" viewBox="0 0 100 100" aria-hidden="true"><use href="#star"/></svg>
+        <p>Mais projetos, apresentações completas e processos estão no Behance.</p>
+        <a class="link-line" href="https://www.behance.net/guitdesign" target="_blank" rel="noreferrer">Abrir Behance</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- LOGOTIPOS: índice com prévia flutuante -->
+  <section class="index" aria-labelledby="index-title">
+    <div class="section-head section-head--inline">
+      <h2 id="index-title" class="display display--sm reveal-type" data-split>Logotipos</h2>
+      <p class="section-note reveal">Passe o cursor para ver. Clique para ampliar.</p>
+    </div>
+    <ol class="index-list" data-gallery="logos">
+      <li><button data-src="assets/void.png"><span class="index-name">VØID</span><span class="index-kind">Logotipo</span><img class="index-thumb" src="assets/void.png" alt="" loading="lazy"></button></li>
+      <li><button data-src="assets/vision.png"><span class="index-name">VISION</span><span class="index-kind">Logotipo</span><img class="index-thumb" src="assets/vision.png" alt="" loading="lazy"></button></li>
+      <li><button data-src="assets/troll-ai.png"><span class="index-name">TROLL.AI</span><span class="index-kind">Logotipo</span><img class="index-thumb" src="assets/troll-ai.png" alt="" loading="lazy"></button></li>
+      <li><button data-src="assets/stories-que-engajam.png"><span class="index-name">Stories que Engajam</span><span class="index-kind">Logotipo</span><img class="index-thumb" src="assets/stories-que-engajam.png" alt="" loading="lazy"></button></li>
+      <li><button data-src="assets/aquabeleza.png"><span class="index-name">Aqua Beleza</span><span class="index-kind">Logotipo</span><img class="index-thumb" src="assets/aquabeleza.png" alt="" loading="lazy"></button></li>
+    </ol>
+    <div class="preview" aria-hidden="true"><img alt=""></div>
+  </section>
+
+  <!-- SOCIAL MEDIA: colunas em parallax -->
+  <section class="social" id="social" aria-labelledby="social-title">
+    <div class="section-head">
+      <h2 id="social-title" class="display reveal-type" data-split>Social media</h2>
+      <p class="section-note reveal">Peças para Nuuvmed, Tocatambor, Sabor do Norte e iSafeCell.</p>
+    </div>
+    <div class="social-cols" data-gallery="social">
+      <div class="social-col" data-speed="-0.06">
+        <button class="post" data-src="assets/studio-social-1.png" aria-label="Ampliar Nuuvmed, automação"><img src="assets/studio-social-1.png" alt="" loading="lazy"></button>
+        <button class="post" data-src="assets/studio-social-2.png" aria-label="Ampliar Nuuvmed, boas-vindas"><img src="assets/studio-social-2.png" alt="" loading="lazy"></button>
+      </div>
+      <div class="social-col" data-speed="0.08">
+        <button class="post" data-src="assets/studio-social-3.png" aria-label="Ampliar Tocatambor, sarau"><img src="assets/studio-social-3.png" alt="" loading="lazy"></button>
+        <button class="post" data-src="assets/studio-social-4.png" aria-label="Ampliar Tocatambor, matrículas"><img src="assets/studio-social-4.png" alt="" loading="lazy"></button>
+      </div>
+      <div class="social-col" data-speed="-0.12">
+        <button class="post" data-src="assets/studio-social-5.png" aria-label="Ampliar Sabor do Norte, Milky Moo"><img src="assets/studio-social-5.png" alt="" loading="lazy"></button>
+        <button class="post" data-src="assets/studio-social-6.png" aria-label="Ampliar Sabor do Norte, novos sabores"><img src="assets/studio-social-6.png" alt="" loading="lazy"></button>
+      </div>
+      <div class="social-col" data-speed="0.04">
+        <button class="post" data-src="assets/studio-social-7.png" aria-label="Ampliar iSafeCell, primeiro iPhone"><img src="assets/studio-social-7.png" alt="" loading="lazy"></button>
+        <button class="post" data-src="assets/studio-social-8.png" aria-label="Ampliar iSafeCell, modelos de iPhone"><img src="assets/studio-social-8.png" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre" aria-labelledby="about-title">
+    <h2 id="about-title" class="sr-only">Sobre</h2>
+    <p class="manifesto" data-words>Uma marca forte não pede atenção. Ela ocupa o espaço com intenção: no símbolo, na cor, no post de terça-feira e em cada detalhe que alguém nem percebe que percebeu.</p>
+    <ul class="services">
+      <li class="reveal" style="--d:0"><h3>Identidade visual</h3><p>Logotipo, símbolo, paleta, tipografia e as aplicações que fazem tudo isso funcionar junto.</p></li>
+      <li class="reveal" style="--d:1"><h3>Branding</h3><p>Posicionamento visual, tom e um sistema que se mantém reconhecível em qualquer meio.</p></li>
+      <li class="reveal" style="--d:2"><h3>Social media</h3><p>Posts, stories e campanhas com consistência de marca e espaço para ousar.</p></li>
+      <li class="reveal" style="--d:3"><h3>Games e FiveM</h3><p>Identidades, logos animados e peças para servidores e comunidades.</p><a class="link-line" href="/fivem">Ver trabalhos de FiveM</a></li>
+    </ul>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato" aria-labelledby="contact-title">
+    <div class="contact-art" aria-hidden="true"></div>
+    <h2 id="contact-title" class="contact-title" data-split>Vamos criar algo seu?</h2>
+    <div class="contact-row">
+      <p>Conte sua ideia no Discord. Respondo com prazos, formato e próximos passos.</p>
+      <a class="btn btn-white btn-lg magnetic" href="https://discord.gg/pM6tQah" target="_blank" rel="noreferrer">Abrir o Discord</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <a href="/" class="brand" aria-label="Guit Design, início"><img src="assets/guit-logo-v10-cropped.png" alt=""><span>Guit Design</span></a>
+    <nav aria-label="Redes">
+      <a href="https://www.behance.net/guitdesign" target="_blank" rel="noreferrer">Behance</a>
+      <a href="https://www.instagram.com/oguitdesign/" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="https://discord.gg/pM6tQah" target="_blank" rel="noreferrer">Discord</a>
+      <a href="https://linktr.ee/guitdesign" target="_blank" rel="noreferrer">Linktree</a>
+    </nav>
+    <nav aria-label="Legal">
+      <a href="termos.html">Termos de uso</a>
+      <a href="termos.html#privacidade">Privacidade</a>
+    </nav>
+  </div>
+  <p class="footer-giant" aria-hidden="true">GUIT DESIGN</p>
+  <small>© <span data-year></span> Guit Design. Todos os direitos reservados.</small>
+</footer>
+
+<!-- Case de projeto -->
+<dialog class="case" aria-labelledby="case-title">
+  <div class="case-inner">
+    <button class="case-close" aria-label="Fechar case">Fechar</button>
+    <header class="case-head">
+      <p class="case-type"></p>
+      <h2 id="case-title" class="case-title" tabindex="-1" autofocus></h2>
+      <p class="case-desc"></p>
+      <p class="case-credit"></p>
+      <a class="link-line case-link" target="_blank" rel="noreferrer">Ver no Behance</a>
+    </header>
+    <div class="case-images"></div>
+  </div>
+</dialog>
+
+<!-- Lightbox -->
+<dialog class="lightbox" aria-label="Imagem ampliada">
+  <img alt="">
+  <div class="lightbox-bar">
+    <button data-step="-1" aria-label="Imagem anterior">Anterior</button>
+    <span class="lightbox-count" aria-live="polite"></span>
+    <button data-step="1" aria-label="Próxima imagem">Próxima</button>
+    <button class="lightbox-close" aria-label="Fechar">Fechar</button>
+  </div>
+</dialog>
+
+<script src="main.js" type="module"></script>
+</body>
 </html>
