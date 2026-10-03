@@ -173,13 +173,22 @@
 .addon h3 { font: 400 30px/1 var(--display); text-transform: uppercase; margin: 2px 0 4px; }
 .addon p { color: var(--mute); }
 .addon-label { font-weight: 600; color: var(--paper) !important; }
-.addon-art { position: relative; width: 120px; height: 72px; }
-.addon-art span { position: absolute; width: 96px; height: 30px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .6); background: linear-gradient(90deg, var(--dusk), var(--magenta), var(--sun)); transition: transform .4s var(--ease-out); }
-.addon-art span:nth-child(1) { top: 0; left: 0; }
-.addon-art span:nth-child(2) { top: 20px; left: 12px; background: linear-gradient(90deg, #000, var(--blue)); }
-.addon-art span:nth-child(3) { top: 40px; left: 24px; }
-.addon:hover .addon-art span:nth-child(1) { transform: translate(-6px, -4px) rotate(-3deg); }
-.addon:hover .addon-art span:nth-child(3) { transform: translate(6px, 4px) rotate(3deg); }
+/* Três banners verticais em leque, como cartas na mão */
+.addon-art { position: relative; width: 136px; height: 88px; }
+.addon-art span {
+  position: absolute; left: 50%; bottom: 0; width: 44px; height: 78px; margin-left: -22px;
+  border-radius: 6px; border: 1px solid rgba(0, 0, 0, .6); box-shadow: 0 8px 18px rgba(0, 0, 0, .45);
+  background: linear-gradient(180deg, var(--dusk), var(--magenta) 55%, var(--sun));
+  transform-origin: 50% 100%; transition: transform .45s var(--ease-spring);
+}
+.addon-art span::before { content: ""; position: absolute; left: 50%; top: 13px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: rgba(255, 255, 255, .85); }
+.addon-art span::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: 12px; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, .55); box-shadow: 0 -7px 0 rgba(255, 255, 255, .3); }
+.addon-art span:nth-child(1) { transform: translateX(-26px) rotate(-12deg); }
+.addon-art span:nth-child(2) { z-index: 1; background: linear-gradient(180deg, #000, var(--blue)); transform: translateY(-4px); }
+.addon-art span:nth-child(3) { transform: translateX(26px) rotate(12deg); }
+.addon:hover .addon-art span:nth-child(1) { transform: translateX(-34px) rotate(-18deg); }
+.addon:hover .addon-art span:nth-child(2) { transform: translateY(-9px); }
+.addon:hover .addon-art span:nth-child(3) { transform: translateX(34px) rotate(18deg); }
 
 /* ---------- Contato: nova missão ---------- */
 .fm-mission {
