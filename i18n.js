@@ -235,22 +235,24 @@ if (lang !== 'pt') {
     for (const a of ['aria-label', 'title', 'alt']) if (el.hasAttribute(a)) el.setAttribute(a, t(el.getAttribute(a)));
 }
 
-/* Seletor de idioma no fim do menu principal */
+/* Seletor de idioma no fim do menu principal (no celular vira uma fileira dentro do menu) */
 const nav = document.querySelector('.topbar nav');
 if (nav) {
-  const sel = document.createElement('select');
-  sel.className = 'lang';
-  sel.setAttribute('aria-label', t('Idioma'));
-  for (const [code, name] of [['pt', 'Português'], ['en', 'English'], ['es', 'Español']]) {
-    const o = new Option(code.toUpperCase(), code, false, code === lang);
-    o.title = name;
-    o.lang = code;
-    sel.add(o);
-  }
-  sel.addEventListener('change', () => {
-    const u = new URL(location.href);
-    u.searchParams.set('lang', sel.value);
-    location.href = u;
+  const names = { pt: 'Português', en: 'English', es: 'Español' };
+  const star = '<svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="44.9,1.3 53.4,35.4 71.2,16.1 62.3,41.4 97.0,40.0 64.8,52.3 87.2,71.5 59.2,61.8 63.0,95.2 47.9,64.9 29.3,83.1 38.3,59.4 4.0,66.8 35.0,49.0 13.8,30.8 41.6,37.6" fill="currentColor"/></svg>';
+  const box = document.createElement('div');
+  box.className = 'lang';
+  box.innerHTML = `<button type="button" class="lang-btn" aria-expanded="false" aria-controls="lang-menu" aria-label="${t('Idioma')}: ${names[lang]}">${lang.toUpperCase()}<svg class="lang-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>`
+    + `<div class="lang-menu" id="lang-menu">${langs.map(l => `<a href="?lang=${l}" hreflang="${l}" lang="${l}"${l === lang ? ' aria-current="true"' : ''}><b>${l.toUpperCase()}</b><span>${names[l]}</span>${star}</a>`).join('')}</div>`;
+  const btn = box.firstElementChild;
+  const setOpen = open => { box.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', open); };
+  btn.addEventListener('click', () => setOpen(!box.classList.contains('is-open')));
+  document.addEventListener('click', e => box.contains(e.target) || setOpen(false));
+  box.addEventListener('keydown', e => {
+    if (e.key !== 'Escape' || !box.classList.contains('is-open')) return;
+    e.stopPropagation();
+    setOpen(false);
+    btn.focus();
   });
-  nav.append(sel);
+  nav.append(box);
 }
