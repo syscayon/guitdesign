@@ -1,3 +1,5 @@
+import { t } from './i18n.js';
+
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
 const root = document.documentElement;
@@ -162,7 +164,7 @@ addEventListener('keydown', e => {
 const toTop = document.createElement('button');
 toTop.className = 'to-top';
 toTop.textContent = '↑';
-toTop.setAttribute('aria-label', 'Voltar ao topo');
+toTop.setAttribute('aria-label', t('Voltar ao topo'));
 toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }));
 document.body.append(toTop);
 const stars = $$('.hero-star, .works-star');
@@ -214,7 +216,7 @@ $$('.reveal, .reveal-type, .work, .contact-title, .footer-giant').forEach(el => 
 
 /* ---------- Palavra que troca no hero ---------- */
 const swap = $('.word-swap');
-const swapWords = ['presença', 'autoridade', 'criatividade', 'impacto', 'personalidade'];
+const swapWords = ['presença', 'autoridade', 'criatividade', 'impacto', 'personalidade'].map(t);
 if (swap && !reduced) {
   let n = 0;
   setInterval(() => {
@@ -315,15 +317,15 @@ function openCase(key, fromImg) {
   cursor?.classList.remove('on');
   caseOrigin = fromImg;
   withTransition(async () => {
-    $('.case-type', caseDlg).textContent = p.type;
+    $('.case-type', caseDlg).textContent = t(p.type);
     $('.case-title', caseDlg).textContent = p.name;
-    $('.case-desc', caseDlg).textContent = p.desc;
-    $('.case-credit', caseDlg).textContent = p.credit;
+    $('.case-desc', caseDlg).textContent = t(p.desc);
+    $('.case-credit', caseDlg).textContent = t(p.credit);
     $('.case-link', caseDlg).href = p.source;
     caseImages.replaceChildren(...p.images.map((n, i) => {
       const img = new Image();
       img.src = `assets/${key}-${n}.webp`;
-      img.alt = `${p.name}, imagem ${i + 1} de ${p.images.length}`;
+      img.alt = `${p.name}, ` + t('imagem {n} de {total}').replace('{n}', i + 1).replace('{total}', p.images.length);
       if (i) img.loading = 'lazy';
       return img;
     }));
@@ -365,7 +367,7 @@ function showLb(i) {
 }
 $$('[data-gallery]').forEach(gallery => {
   const buttons = $$('[data-src]', gallery);
-  const items = buttons.map(b => ({ src: b.dataset.src, label: (b.getAttribute('aria-label') || b.querySelector('.index-name').textContent).replace(/^Ampliar /, '') }));
+  const items = buttons.map(b => ({ src: b.dataset.src, label: (b.getAttribute('aria-label') || b.querySelector('.index-name').textContent).replace(t('Ampliar') + ' ', '') }));
   buttons.forEach((b, i) => b.addEventListener('click', () => {
     lbItems = items;
     showLb(i);

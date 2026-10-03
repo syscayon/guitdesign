@@ -11,6 +11,11 @@ try {
     const out = execFileSync('node', ['qa/cdp.mjs', `http://localhost:4321/_qa-${p}.html`, String(w), motion], { encoding: 'utf8' });
     for (const line of out.split('\n').filter(l => l.includes('FAIL'))) { fails++; console.log(`[${motion}] ${line}`); }
   }
+  // Idiomas: uma passada por página em EN e ES
+  for (const lang of ['en', 'es']) for (const p of pages) {
+    const out = execFileSync('node', ['qa/cdp.mjs', `http://localhost:4321/_qa-${p}.html?lang=${lang}`, '1440', 'normal'], { encoding: 'utf8' });
+    for (const line of out.split('\n').filter(l => l.includes('FAIL'))) { fails++; console.log(`[${lang}] ${line}`); }
+  }
 } finally {
   for (const p of pages) rmSync(`_qa-${p}.html`, { force: true });
 }

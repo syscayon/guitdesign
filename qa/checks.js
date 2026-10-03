@@ -83,6 +83,18 @@ addEventListener('load', async () => {
     log(getComputedStyle(menu).display === 'none', 'botão Menu oculto no desktop');
   }
 
+  // Tradução: em EN/ES não pode sobrar português (heurística por letras e palavras típicas)
+  const lang = d.documentElement.lang;
+  if (lang !== 'pt-BR') {
+    const pt = /[ãõç]|\b(com|não|você|seu|sua|uma|das|pelo|pela|ao|aos|para o|para a)\b/i;
+    const texts = [d.title, d.querySelector('meta[name="description"]')?.content || ''];
+    const walk = d.createTreeWalker(d.body, NodeFilter.SHOW_TEXT);
+    for (let n; (n = walk.nextNode());) if (!n.parentElement.closest('script')) texts.push(n.data);
+    for (const el of d.querySelectorAll('[aria-label], [title], [alt]')) for (const a of ['aria-label', 'title', 'alt']) texts.push(el.getAttribute(a) || '');
+    const left = [...new Set(texts.map(s => s.replace(/\s+/g, ' ').trim()).filter(s => pt.test(s)))];
+    log(left.length === 0, `tradução ${lang} completa (sobrou: ${left.join(' | ') || 'nada'})`);
+  }
+
   // Imagens quebradas na página
   const brokenImgs = [...d.images].filter(i => i.complete && i.naturalWidth === 0 && i.getAttribute('src'));
   log(brokenImgs.length === 0, `imagens da página carregam (quebradas: ${brokenImgs.map(i => i.getAttribute('src')).join(', ') || 'nenhuma'})`);

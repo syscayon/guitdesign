@@ -1,4 +1,6 @@
 // Interações exclusivas da página /fivem. O main.js cuida do que é comum (topo, luz, case, lightbox).
+import { t } from './i18n.js';
+
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
 const $ = (s, el = document) => el.querySelector(s);
@@ -113,7 +115,7 @@ $$('.scratch').forEach(card => {
     ctx.font = '600 15px "Bricolage Grotesque", sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('Raspe para revelar', r.width / 2, r.height / 2);
+    ctx.fillText(t('Raspe para revelar'), r.width / 2, r.height / 2);
   }
 
   function reveal() { card.classList.add('done'); }
